@@ -38,7 +38,7 @@ func (i *ProfileHandlerImpl) Detail(ctx *gin.Context) {
 		"initiator": "profile",
 		"user":      user,
 	}
-	renderTemplate(ctx, "profile", data)
+	RenderBaseInstance.RenderTemplate(ctx, "profile", data)
 }
 
 func (i *ProfileHandlerImpl) Likes(ctx *gin.Context) {
@@ -54,5 +54,5 @@ func (i *ProfileHandlerImpl) Likes(ctx *gin.Context) {
 		"initiator": "likes",
 		"user":      user,
 	}
-	renderTemplate(ctx, "profile_likes", data)
+	RenderBaseInstance.RenderTemplate(ctx, "profile_likes", data)
 }
